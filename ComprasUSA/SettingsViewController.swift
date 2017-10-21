@@ -66,11 +66,11 @@ class SettingsViewController: UIViewController {
     
     func showAlert(type: StateType, state: State?) {
         let title = (type == .add) ? "Adicionar" : "Editar"
-        let alert = UIAlertController(title: "Estado", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Adicionar Estado", message: nil, preferredStyle: .alert)
             
             //title: "\(state) Estado", message: nil, preferredStyle: .alert)
         alert.addTextField { (textField: UITextField) in
-            textField.placeholder = "Nome da estado"
+            textField.placeholder = "Nome do estado"
             if let name = state?.state {
                 textField.text = name
             }

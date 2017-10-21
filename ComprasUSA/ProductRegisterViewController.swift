@@ -114,34 +114,6 @@ class ProductRegisterViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func addPhoto(_ sender: UIButton) {
         
-        
-//        //Criando o alerta que será apresentado ao usuário
-//        let alert = UIAlertController(title: "Selecionar poster", message: "De onde você quer escolher o poster?", preferredStyle: .actionSheet)
-//
-//        //Verificamos se o device possui câmera. Se sim, adicionamos a devida UIAlertAction
-//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-//            let cameraAction = UIAlertAction(title: "Câmera", style: .default, handler: { (action: UIAlertAction) in
-//                self.selectPicture(sourceType: .camera)
-//            })
-//            alert.addAction(cameraAction)
-//        }
-//
-//        //As UIAlertActions de Biblioteca de fotos e Álbum de fotos também são criadas e adicionadas
-//        let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (action: UIAlertAction) in
-//            self.selectPicture(sourceType: .photoLibrary)
-//        }
-//        alert.addAction(libraryAction)
-//
-//        let photosAction = UIAlertAction(title: "Álbum de fotos", style: .default) { (action: UIAlertAction) in
-//            self.selectPicture(sourceType: .savedPhotosAlbum)
-//        }
-//        alert.addAction(photosAction)
-//
-//        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-//        alert.addAction(cancelAction)
-//
-//        present(alert, animated: true, completion: nil)
-        
         //Criando o alerta que será apresentado ao usuário
         let alert = UIAlertController(title: "Selecionar poster", message: "De onde você quer escolher o poster?", preferredStyle: .actionSheet)
         
@@ -200,31 +172,12 @@ class ProductRegisterViewController: UIViewController {
         }
     }
     
-    // Menssagem para validar se o pessoal insere todos os campos:
+    // Menssagem para validar se o pessoal insere todos os campos
     func showAlert() {
-        let alert = UIAlertController(title: "Alerta!", message: "Por favor preencha os campos em branco!", preferredStyle: .alert)
-        
+        let alert = UIAlertController(title: "Atenção!", message: "Todos os campos devem ser preenchidos", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
         present(alert, animated: true, completion: nil)
-        
-        
     }
-//
-//    func selectPicture(sourceType: UIImagePickerControllerSourceType) {
-//
-//        //Criando o objeto UIImagePickerController
-//        let imagePicker = UIImagePickerController()
-//
-//        //Definimos seu sourceType através do parâmetro passado
-//        imagePicker.sourceType = sourceType
-//
-//        //Definimos a MovieRegisterViewController como sendo a delegate do imagePicker
-//        imagePicker.delegate = self
-//
-//        //Apresentamos a imagePicker ao usuário
-//        present(imagePicker, animated: true, completion: nil)
-//    }
     
     @IBAction func selectState(_ sender: UITextField) {
         loadStates()
